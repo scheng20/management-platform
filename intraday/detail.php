@@ -18,13 +18,13 @@
     class C_page 
     {
         public $pageSize = 1;
-	      public $currentPage = 0;
-	      public $totalNum = 910;
-	      public $startIndex = 0;
-	      public $endIndex= 1;
-	      public $totalPage=911;
-	      public $totalPageNum = 910;
-	      public $hasNextPage = true;
+	public $currentPage = 0;
+	public $totalNum = 910;
+	public $startIndex = 0;
+	public $endIndex= 1;
+	public $totalPage=911;
+	public $totalPageNum = 910;
+	public $hasNextPage = true;
     }
 
     class C_list 
@@ -61,9 +61,9 @@
                 $result->data->page->hasNextpage = true;
             }
 			
-			$n = $_GET["currentPage"]; //It works!
+	    $n = $_GET["currentPage"]; //It works!
 			
-			// Loop that updates the content & page based on page number. 
+	     // Loop that updates the content & page based on page number. 
             for ($x = 0; $x < $n; $x++)
             {
                 // goes to the correct row
@@ -73,29 +73,30 @@
                 $result->data->page->currentPage= $n;
             }
 			
-			$lastdate = $row[0];
-			$list->publishDate = $lastdate;
+		$lastdate = $row[0];
+		$list->publishDate = $lastdate;
 			
-			$sql = "SELECT DATE_FORMAT(publish_date, '%H:%i') as publishtime, id, content FROM intraday_review where date(publish_date) = '$lastdate' order by publish_date DESC";
+		$sql = "SELECT DATE_FORMAT(publish_date, '%H:%i') as publishtime, id, content FROM intraday_review where date(publish_date) = '$lastdate' order by publish_date DESC";
 			
-			if ($sqlresult = $mysqli->query($sql))
-			{
+		if ($sqlresult = $mysqli->query($sql))
+		{
     			if ($sqlresult->num_rows>0) 
     			{
-                    while ($row=$sqlresult->fetch_row())
+                    		while ($row=$sqlresult->fetch_row())
         			{
         			    $listcontent = new C_listcontent;        
         			    $listcontent->publishTime= $row[0];
         			    $listcontent->id = $row[1];
-                        $listcontent->content= $row[2]; 
-                        array_push($list->list, $listcontent);
+                        	    $listcontent->content= $row[2]; 
+				    array_push($list->list, $listcontent);
         			}
     			}
-			}
+		}
         }
     }
     
     array_push($result->data->list,$list);
+
     $jsonresult=json_encode($result, JSON_UNESCAPED_UNICODE);
     echo urldecode($jsonresult);
     $mysqli->close();
