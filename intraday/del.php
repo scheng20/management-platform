@@ -1,4 +1,5 @@
 <?php 
+
     header('Content-Type: application/json');
     require_once $_SERVER['DOCUMENT_ROOT'] .'/source/config.php';
     
