@@ -99,9 +99,9 @@
 
             while ($row=$sqlresult->fetch_row())
             {
-        	      $listcontent = new C_listcontent;        
-        		    $listcontent->id= $row[0];
-        		    $listcontent->content = $row[1];
+        	    $listcontent = new C_listcontent;        
+        		$listcontent->id= $row[0];
+        		$listcontent->content = $row[1];
                 $listcontent->user_id = $row[2]; 
                 $listcontent->pid = $row[3]; 
                 $listcontent->module_id = $row[4]; 
