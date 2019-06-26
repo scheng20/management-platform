@@ -32,7 +32,7 @@
     
      class C_listcontent
     {
-        public $name = "bad word";
+        public $name = "some word";
         public $id = 140;
         public $updatedAt = "2018-12-27";
         public $status = 1;
@@ -41,18 +41,6 @@
     $result = new C_result;
     $result->data = new C_data;
     $result->data->page = new C_page;
-    
-    $listcontent1 = new C_listcontent;
-    $listcontent2 = new C_listcontent;
-    
-    $listcontent2->name = "oh no";
-    $listcontent2->id = 123;
-    $listcontent2->updatedAt = "2019-05-22";
-    $listcontent2->status = 1;
-    
-    //Pushing these results into the array for testing purposes.
-    //array_push($result->data->list, $listcontent1);
-    //array_push($result->data->list, $listcontent2);
     
     // Each page displays 30 words
     
@@ -77,12 +65,12 @@
             }
 
             while ($row=$sqlresult->fetch_row())
-        	  {
+        	{
         	      $listcontent = new C_listcontent;        
-        		    $listcontent->id= $row[0];
-        		    $listcontent->name = $row[1];
-                $listcontent->status= $row[2]; 
-                $listcontent->updatedAt= $row[3]; 
+        		  $listcontent->id= $row[0];
+        		  $listcontent->name = $row[1];
+                  $listcontent->status= $row[2]; 
+                  $listcontent->updatedAt= $row[3]; 
                 
                 array_push($result->data->list, $listcontent);
         	}
