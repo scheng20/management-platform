@@ -120,9 +120,7 @@
     	    $result->data->page->totalNum = $totalNumber;
     	    $result->data->page->totalPage = ceil($totalNumber / 30);
     	    $result->data->page->totalPageNum = ceil($totalNumber / 30);
-    	    
-    	    //error_log("Total Number:".$totalNumber . "\n", 3, "data.log");
-    	    //error_log("Total Pages:".ceil($totalNumber / 30) . "\n", 3, "data.log");
+            
     	}
     }
     
