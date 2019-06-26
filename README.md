@@ -1,6 +1,12 @@
 # Management Site For Stock Analysis Subscription Service
 An online management site for a stock analysis subscription service.
 
+<img src="screenshots/Management7.PNG" width="285" title="Login Page for Admin"> <img src="screenshots/Management1.PNG" width="285" title="Intraday Analysis"> <img src="screenshots/Management9.PNG" width="285" title="Add New Insights">
+
+<img src="screenshots/Management2.PNG" width="285" title="Comments"> <img src="screenshots/Management3.PNG" width="285" title="View Comment Details"> <img src="screenshots/Management4.PNG" width="285" title="Articles">
+
+<img src="screenshots/Management5.PNG" width="285" title="Add new Articles"> <img src="screenshots/Management6.PNG" width="285" title="View User Info"> <img src="screenshots/Management8.PNG" width="285" title="View User Stats">
+
 Note: all data show in screenshots are dummy data (real data is not shown in order to protect the business and user's privacy)
 
 ## :star: Introduction 
@@ -11,6 +17,6 @@ The management site's main goal is to manage all of the data on the stock analys
 - Adding and removing insights (comments about the intraday market) on the intraday analysis page
 - Writing, editing, and publishing articles (such as stock forecasts)
 - Replying, removing and deleteing comments from users
-- Viewing all user data and statistics
+- Viewing all user information and statistics
 - Adding and removing blacklisted words (prevents swear words from being posted in comments)
 - Configuring other settings
