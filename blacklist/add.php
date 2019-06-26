@@ -20,8 +20,7 @@
     if (isset($_POST['name']))
     {
         $data = $_POST['name'];
-        $stmt = $mysqli->prepare("INSERT INTO key_words (name, status, updated_at, created_at) 
-VALUES ( ? , 1, '$date_and_time', '$date_and_time')");
+        $stmt = $mysqli->prepare("INSERT INTO key_words (name, status, updated_at, created_at) VALUES ( ? , 1, '$date_and_time', '$date_and_time')");
 
         if ($stmt === false) 
         {
