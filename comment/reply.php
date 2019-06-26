@@ -49,8 +49,7 @@
     }
     else
     {
-        $stmt = $mysqli->prepare("INSERT INTO user_comment (content, user_id, pid, status, type, is_recommend, like_num, updated_at, created_at) 
-VALUES (CONCAT(': ', ? ), 3, $replyToID, 1, 3, $isRecommend, 0, '$date_and_time', '$date_and_time')");
+        $stmt = $mysqli->prepare("INSERT INTO user_comment (content, user_id, pid, status, type, is_recommend, like_num, updated_at, created_at) VALUES (CONCAT(': ', ? ), 3, $replyToID, 1, 3, $isRecommend, 0, '$date_and_time', '$date_and_time')");
         
         if ($stmt === false) 
         {
