@@ -78,47 +78,44 @@ where t1.id=t2.maxid) AS r ON r.user_id = user.id
         {
             if ($sqlresult->num_rows>0) 
             {
-        	     
-        	     if ($sqlresult->num_rows>=29)
-        	     {
+		    if ($sqlresult->num_rows>=29)
+        	    {
         	         $result->data->page->hasNextPage = true;
-        	     }
-        	     else
-        	     {
-        	         // Uhhh not exactly right but I guess it works??
+        	    }
+        	    else
+        	    {
         	         $result->data->page->hasNextPage = false;
-        	     }
-        	     
-                while ($row=$sqlresult->fetch_row())
-            	{
-            	    $listcontent = new C_listcontent;        
-            	    $listcontent->id= $row[0];
-            		$listcontent->userName = $row[1];
-                    $listcontent->phone= $row[2]; 
-                    $listcontent->headImg= $row[3]; 
-                    $listcontent->status= $row[4];
-                    $listcontent->validDate = $row[5].'-'.$row[6];
-                    
-                    if ($row[7] == 1)
-                    {
-                        $listcontent->type = "Free Trial";
-                    }
-                    else if ($row[7] == 2)
-                    {
-                        $listcontent->type = "Monthly Membership";
-                    }
-                    else if ($row[7] == 3)
-                    {
-                        $listcontent->type = "Yearly Membership";
-                    }
-                    else if ($row [7] == 4)
-                    {
-                        $listcontent->type = "";
-                    }
-                    
-                    array_push($result->data->list, $listcontent);
+        	    }
+		    
+		    while ($row=$sqlresult->fetch_row())
+		    {
+			    $listcontent = new C_listcontent;
+			    $listcontent->id= $row[0];
+			    $listcontent->userName = $row[1];
+			    $listcontent->phone= $row[2]; 
+			    $listcontent->headImg= $row[3]; 
+			    $listcontent->status= $row[4];
+			    $listcontent->validDate = $row[5].'-'.$row[6];
+			    
+			    if ($row[7] == 1)
+			    {
+				    $listcontent->type = "Free Trial";
+			    }
+			    else if ($row[7] == 2)
+			    {
+				    $listcontent->type = "Monthly Membership";
+			    }
+			    else if ($row[7] == 3)
+			    {
+				    $listcontent->type = "Yearly Membership";
+			    }
+			    else if ($row [7] == 4)
+			    {
+				    $listcontent->type = "";
+			    }
+			    array_push($result->data->list, $listcontent);
             	}
-        	}
+            }
         }
         
         // Calculates the page numbers, total numbers, etc.
@@ -173,7 +170,7 @@ WHERE user.user_name LIKE ?
             {
             	    $listcontent = new C_listcontent;        
             	    $listcontent->id= $id;
-            		$listcontent->userName = $username;
+            	    $listcontent->userName = $username;
                     $listcontent->phone= $phone; 
                     $listcontent->headImg= $headImg; 
                     $listcontent->status= $status;
@@ -232,16 +229,14 @@ WHERE user.user_name LIKE ?");
                 
                 while ($stmtPage->fetch())
                 {
-                    $result->data->page->totalNum = $count;
+                    	$result->data->page->totalNum = $count;
         	        $result->data->page->totalPage = ceil($count / 30);
         	        $result->data->page->totalPageNum = ceil($count / 30);
                 }
                 
             }
         	    
-        	
-        	
-        	// close statement
+            // close statement
             $stmtPage->close();
         }
     }
