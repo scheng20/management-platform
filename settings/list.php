@@ -62,15 +62,15 @@
 
           $result->data->page->currentPage = $_GET["currentPage"];
             
-          while ($row=$sqlresult->fetch_row())
-        	{
-        	      $listcontent = new C_listcontent;        
+            while ($row=$sqlresult->fetch_row())
+            {
+        	        $listcontent = new C_listcontent;        
         		    $listcontent->nid = $row[0];
         		    $listcontent->remark = $row[1];
-                $listcontent->id = $row[2]; 
-                $listcontent->value = $row[3]; 
-                $listcontent->status = $row[4]; 
-                $listcontent->updatedAt = $row[5]; 
+                    $listcontent->id = $row[2]; 
+                    $listcontent->value = $row[3]; 
+                    $listcontent->status = $row[4]; 
+                    $listcontent->updatedAt = $row[5]; 
                 
                 array_push($result->data->list, $listcontent);
         	}
