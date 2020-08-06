@@ -1,5 +1,5 @@
 # Management Site For Stock Analysis Subscription Service
-An online management site for a stock analysis subscription service. I built the backend of this site using PHP and SQL. 
+An online management site for a stock analysis subscription service. I built the backend of this site using PHP and SQL. [Site Demo Video](https://www.youtube.com/watch?v=mSV1RIWVRtQ)
 
 <img src="screenshots/Management7.PNG" width="285" title="Login Page for Admin"> <img src="screenshots/Management1.PNG" width="285" title="Intraday Analysis"> <img src="screenshots/Management9.PNG" width="285" title="Add New Insights">
 
