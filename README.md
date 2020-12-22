@@ -1,11 +1,11 @@
 # Management Site For Stock Analysis Subscription Service
 An online management site for a stock analysis subscription service. I built the backend of this site using PHP and SQL. [Site Demo Video](https://www.youtube.com/watch?v=mSV1RIWVRtQ)
 
-<img src="screenshots/Management7.PNG" width="285" title="Login Page for Admin"> <img src="screenshots/Management1.PNG" width="285" title="Intraday Analysis"> <img src="screenshots/Management9.PNG" width="285" title="Add New Insights">
+<img src="screenshots/Management7.PNG" width="275" title="Login Page for Admin"> <img src="screenshots/Management1.PNG" width="275" title="Intraday Analysis"> <img src="screenshots/Management9.PNG" width="275" title="Add New Insights">
 
-<img src="screenshots/Management2.PNG" width="285" title="Comments"> <img src="screenshots/Management3.PNG" width="285" title="View Comment Details"> <img src="screenshots/Management4.PNG" width="285" title="Articles">
+<img src="screenshots/Management2.PNG" width="275" title="Comments"> <img src="screenshots/Management3.PNG" width="275" title="View Comment Details"> <img src="screenshots/Management4.PNG" width="275" title="Articles">
 
-<img src="screenshots/Management5.PNG" width="285" title="Add new Articles"> <img src="screenshots/Management6.PNG" width="285" title="View User Info"> <img src="screenshots/Management8.PNG" width="285" title="View User Stats">
+<img src="screenshots/Management5.PNG" width="275" title="Add new Articles"> <img src="screenshots/Management6.PNG" width="275" title="View User Info"> <img src="screenshots/Management8.PNG" width="275" title="View User Stats">
 
 Note: all data show in screenshots are dummy data (real data is not shown in order to protect the business and user's privacy)
 
